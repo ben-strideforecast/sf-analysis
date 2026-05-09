@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:runsignup.com)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\Ben Sylve\\\\Documents\\\\git_sf\\\\sf-analysis\" -Recurse -File)",
+      "Bash(Select-Object FullName)",
+      "Bash(Format-List)"
     ]
   }
 }
