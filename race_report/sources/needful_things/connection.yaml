@@ -1,0 +1,4 @@
+name: race_analytics
+type: duckdb
+options:
+  filename: "..\\..\\..\\..\\sf-pipeline\\db\\race_analytics.duckdb"

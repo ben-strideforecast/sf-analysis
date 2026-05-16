@@ -1,0 +1,1 @@
+SELECT * FROM silver.race_event ORDER BY race_date
