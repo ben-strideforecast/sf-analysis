@@ -9,7 +9,11 @@
       "Bash(python -c ' *)",
       "Bash(npm run *)",
       "Bash(python -c \"import sys,json; p=json.load\\(sys.stdin\\); print\\(p.get\\('version'\\), p.get\\('main'\\)\\)\")",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "PowerShell(python \"C:\\\\Users\\\\Ben Sylve\\\\Documents\\\\git_sf\\\\sf-analysis\\\\query_watermelon.py\")",
+      "Bash(python race_visuals/weather_by_year.py)",
+      "Bash(Start-Sleep -Seconds 5)",
+      "Bash(Get-Content \"C:\\\\Users\\\\BENSYL~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Ben-Sylve-Documents-git-sf-sf-analysis\\\\2ab2fa3c-25b9-46aa-af29-a98bd3428d5d\\\\tasks\\\\bwuelq415.output\" -ErrorAction SilentlyContinue)"
     ]
   }
 }
