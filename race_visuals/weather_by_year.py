@@ -47,39 +47,38 @@ years = [r[1] for r in rows]
 temps = [r[2] for r in rows]
 humidities = [r[3] for r in rows]
 
-fig, ax1 = plt.subplots(figsize=(9, 5))
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5), sharey=False)
 
 color_temp = "#d62728"
 color_hum = "#1f77b4"
 
-line1, = ax1.plot(years, temps, marker="o", linewidth=2, markersize=7, color=color_temp, label="Temp (°F)")
+ax1.plot(years, temps, marker="o", linewidth=2, markersize=7, color=color_temp)
 for x, y in zip(years, temps):
     ax1.annotate(f"{y:.0f}°", (x, y), textcoords="offset points", xytext=(0, 10), ha="center", color=color_temp)
-
+ax1.set_ylabel("Temperature (°F)")
 ax1.set_xlabel("Year")
-ax1.set_ylabel("Temperature (°F)", color=color_temp)
-ax1.tick_params(axis="y", labelcolor=color_temp)
 ax1.set_xticks(years)
 temp_range = max(temps) - min(temps)
 temp_pad = max(temp_range * 0.3, 3)
 ax1.set_ylim(min(temps) - temp_pad, max(temps) + temp_pad)
+ax1.set_title("Temperature (°F)")
+for spine in ["top", "right"]:
+    ax1.spines[spine].set_visible(False)
 
-ax2 = ax1.twinx()
-line2, = ax2.plot(years, humidities, marker="s", linewidth=2, markersize=7, color=color_hum, linestyle="--", label="Humidity (%)")
+ax2.plot(years, humidities, marker="s", linewidth=2, markersize=7, color=color_hum)
 for x, y in zip(years, humidities):
     ax2.annotate(f"{y:.0f}%", (x, y), textcoords="offset points", xytext=(0, 10), ha="center", color=color_hum)
-
-ax2.set_ylabel("Humidity (%)", color=color_hum)
-ax2.tick_params(axis="y", labelcolor=color_hum)
+ax2.set_ylabel("Humidity (%)")
+ax2.set_xlabel("Year")
+ax2.set_xticks(years)
 hum_range = max(humidities) - min(humidities)
 hum_pad = max(hum_range * 0.3, 3)
 ax2.set_ylim(min(humidities) - hum_pad, max(humidities) + hum_pad)
+ax2.set_title("Humidity (%)")
+for spine in ["top", "right"]:
+    ax2.spines[spine].set_visible(False)
 
-ax1.set_title(f"{race_name} — Race-Start Temperature & Humidity by Year")
-ax1.legend(handles=[line1, line2], loc="upper left")
-
-for spine in ["top"]:
-    ax1.spines[spine].set_visible(False)
+fig.suptitle(f"{race_name} — Race-Start Weather by Year")
 
 plt.tight_layout()
 plt.show()
