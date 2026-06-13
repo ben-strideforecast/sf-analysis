@@ -14,7 +14,39 @@
       "Bash(python race_visuals/weather_by_year.py)",
       "Bash(Start-Sleep -Seconds 5)",
       "Bash(Get-Content \"C:\\\\Users\\\\BENSYL~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Ben-Sylve-Documents-git-sf-sf-analysis\\\\2ab2fa3c-25b9-46aa-af29-a98bd3428d5d\\\\tasks\\\\bwuelq415.output\" -ErrorAction SilentlyContinue)",
-      "Bash(python race_visuals/finish_times.py)"
+      "Bash(python race_visuals/finish_times.py)",
+      "Bash(rm \"c:/Users/Ben Sylve/Documents/git_sf/sf-analysis/.claude/commands/watermelon-goat-index.md\")",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(python:*)",
+      "Bash(python -:*)",
+      "Bash(pip install:*)",
+      "Bash(pip list)",
+      "Bash(pip show:*)",
+      "Bash(pip3:*)",
+      "Bash(Rscript:*)",
+      "Bash(quarto:*)",
+      "Bash(jupyter:*)",
+      "Bash(duckdb:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(echo:*)",
+      "WebFetch(domain:www.misshsaa.com)",
+      "WebFetch(domain:mhsaa.com)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(gh api *)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:pypi.org)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Ben Sylve\\Documents\\git_sf\\sf-analysis\\.claude\\commands"
     ]
   }
 }
