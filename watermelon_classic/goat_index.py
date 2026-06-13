@@ -130,6 +130,7 @@ def aggregate_runner_stats(df, min_appearances=MIN_APPEARANCES):
         appearances=("year", "nunique"),
         avg_age_graded_pct=("age_graded_pct", "mean"),
         avg_finish_position=("finish_position", "mean"),
+        avg_finish_time_seconds=("finish_time_seconds", "mean"),
         avg_dominance=("dominance", "mean"),
         std_age_graded_pct=("age_graded_pct", "std"),
         best_age_graded_pct=("age_graded_pct", "max"),
@@ -181,7 +182,8 @@ def find_highlights(per_row_df, stats):
 
 OUTPUT_COLS = [
     "name", "appearances", "avg_age_graded_pct", "avg_finish_position",
-    "speed_score", "dominance_score", "participation_score", "goat_index",
+    "avg_finish_time_seconds", "speed_score", "dominance_score",
+    "participation_score", "goat_index",
 ]
 
 
